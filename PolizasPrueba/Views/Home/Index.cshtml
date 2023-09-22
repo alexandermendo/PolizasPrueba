@@ -1,0 +1,51 @@
+﻿@model List<PolizaSeguro>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Pólizas de Seguro</title>
+</head>
+<body>
+    <h1>Listado de Pólizas de Seguro</h1>
+    
+    <table>
+        <thead align="center" valign="middle" bgcolor="#ffcc99">
+            <tr align="center">
+                <th>Número de Póliza</th>
+                <th>Nombre del Cliente</th>
+                <th>Identificación</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Fecha de toma de Póliza</th>
+                <th>Coberturas</th>
+                <th>Valor máximo cubierto</th>
+                <th>Nombre del Plan</th>
+                <th>Ciudad de Residencia</th>
+                <th>Dirección de Residencia</th>
+                <th>Placa Automotor</th>
+                <th>Modelo Automotor</th>
+                <th>Inspección</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var poliza in Model)
+            {
+                <tr align="center">
+                    <td>@poliza.numeroPoliza</td>
+                    <td>@poliza.nombreCliente</td>
+                    <td>@poliza.identificacionCliente</td>
+                    <td>@poliza.fechaNacimientoCliente</td>
+                    <td>@poliza.fechaTomaPoliza</td>
+                    <td>@poliza.coberturas[0]</td>
+                    <td>@poliza.valorMaximoCubierto</td>
+                    <td>@poliza.nombrePlan</td>
+                    <td>@poliza.ciudadResidenciaCliente</td>
+                    <td>@poliza.direccionResidenciaCliente</td>
+                    <td>@poliza.placaAutomotor</td>
+                    <td>@poliza.modeloAutomotor</td>
+                    <td>@poliza.vehiculoTieneInspeccion</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

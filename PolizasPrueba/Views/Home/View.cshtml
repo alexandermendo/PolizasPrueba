@@ -1,0 +1,14 @@
+﻿@model PolizaSeguro
+
+<h2>Crear Póliza de Seguro</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="nombreCliente">Nombre del Cliente</label>
+        <input asp-for="nombreCliente" class="form-control" />
+    </div>
+    <!-- Agrega otros campos del formulario aquí -->
+    <div class="form-group">
+        <input type="submit" value="Crear Póliza" class="btn btn-primary" />
+    </div>
+</form>
